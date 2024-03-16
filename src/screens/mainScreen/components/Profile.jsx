@@ -1,5 +1,6 @@
 import { Text, View } from "react-native";
 
+
 export default function Profile({size, color, radius}){
 
     return(

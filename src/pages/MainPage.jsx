@@ -16,6 +16,7 @@ export default function MainPage(){
     return(
       
             <Tab.Navigator
+           
                 initialRouteName="New"
                 screenOptions={{tabBarActiveTintColor:"#ffffff",tabBarInactiveTintColor:"gray", headerShown:false,tabBarLabelStyle:{fontSize:10, fontWeight:"bold"}, tabBarStyle:{borderColor:"black",paddingBottom:10, height:80, backgroundColor:"#171616"}}}
                 

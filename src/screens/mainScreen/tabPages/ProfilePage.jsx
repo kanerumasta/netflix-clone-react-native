@@ -1,9 +1,12 @@
 import { Text, TouchableOpacity, View } from "react-native";
-import Icon from 'react-native-vector-icons/Ionicons'
+import Icon from 'react-native-vector-icons/Ionicons';
 import Profile from "../components/Profile";
+import { useContext } from "react";
+import { BottomSheetContext } from "../../../../App";
 
 
 function Header({navigation}){
+    const {isOpen,setIsOpen} = useContext(BottomSheetContext)
     return(
     <View className="bg-black p-3 flex-row items-center justify-between">
         <Text className="text-white text-xl font-black">My Netflix</Text>
@@ -11,8 +14,10 @@ function Header({navigation}){
             <TouchableOpacity onPress={()=>navigation.navigate('search')}>
             <Icon name="search" color="#ffffff" size={30}/>
             </TouchableOpacity>
-        
+        <TouchableOpacity onPress={()=>setIsOpen(!isOpen)}>
         <Icon name="menu" color="#ffffff" size={30}/>
+        </TouchableOpacity>
+      
         </View>
     </View>
     )
@@ -36,6 +41,8 @@ function Menu({icon, title, color}){
 
 
 export default function ProfilePage({navigation}){
+    
+    
     return(
         <View className="bg-black h-full">
             <Header navigation={navigation}/>
@@ -45,7 +52,7 @@ export default function ProfilePage({navigation}){
             </View>
             <Menu color={"red"} title="Nofitications" icon={<Icon color="#ffffff" name="notifications" size={20}/>}/>
             <Menu color="blue" title="Downloads" icon={<Icon color="#ffffff" name="download" size={20}/>}/>
-            
+           
         </View>
     )
 }
