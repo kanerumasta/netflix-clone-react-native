@@ -16,7 +16,7 @@ function Header(){
 export default function GamesPage({navigation}){
     return(
         <View className="bg-black h-full w-screen">
-            <ScrollView stickyHeaderIndices={[0]}>
+            <ScrollView showsVerticalScrollIndicator={false} stickyHeaderIndices={[0]}>
            <Header/>
             <View className="w-screen h-[400px]">
             <Video 

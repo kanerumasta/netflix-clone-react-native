@@ -1,4 +1,5 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
+import LinearGradient from "react-native-linear-gradient";
 
 function Header(){
     return (
@@ -9,38 +10,52 @@ function Header(){
     )
 }
 
-function SmileyCard({color}){
+function SmileyCard({text,colors,navigation}){
     return (
-        <View className="items-center">
-        <View className={`m-4 border-solid border-2 border-blue-400 flex items-center justify-center h-[100px] w-[100px] rounded-xl bg-${color}-400`}>
-            <Text>
-                {color}
-            </Text>
-        </View>
+        <TouchableOpacity onPress={()=>navigation.navigate('main')} className="items-center">
+        <LinearGradient colors={colors} start={{x:0,y:0}} end={{x:0,y:1}} className={`m-4 flex items-center justify-center h-[100px] w-[100px] rounded-xl`}>
+            {text ? <Text className="text-red-700">
+                {text}
+                </Text>:
+                <View>                
+                    <View className="flex-row gap-6">
+                        <View className="h-4 w-4 rounded-full bg-white"></View>
+                        <View className="h-4 w-4 rounded-full bg-white"></View>
+                    </View>
+                    <View 
+                    style={{
+                        width: "20%",
+                        height: 10,
+                       
+                        borderRadius: 35,
+                        backgroundColor: "black",
+                        transform: [{ scaleX: 5 }, { scaleY: 1 }],
+                      }}
+                    ></View>
+                </View>
+
+                }
+        </LinearGradient>
         <Text>Mac Nino</Text>
-        </View>
+        </TouchableOpacity>
     )
 }
 
 export default function AccountPage({navigation}){
     
     return (
-    <View>
+    <View className="bg-black/80 h-screen">
         <Header/>
         <Text className="text-white text-xl capitalize text-center">who's watching?</Text>
         <View className="justify-center flex flex-row flex-wrap">
-            <SmileyCard color="red"/>
-            <TouchableOpacity onPress={()=>navigation.navigate('main')} className="p-4 bg-blue-400">
-                <Text>NEXT</Text>
-                
-            </TouchableOpacity>
+            <SmileyCard navigation={navigation} colors={["red","#f76464"]}/>
+            <SmileyCard navigation={navigation} colors={["orange","#f6d1ab"]}/>
+            <SmileyCard navigation={navigation} colors={["blue","#4c8cf5"]}/>
+            <SmileyCard text="kids" navigation={navigation} colors={["blue","red","orange","pink"]}/>
+            
         </View>
         
       
-        <Text>HEY</Text>
-        <Text>HEY</Text>
-        <Text>HEY</Text>
-        <Text>HEY</Text>
     </View>
     )
 }

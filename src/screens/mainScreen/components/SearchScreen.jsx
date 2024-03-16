@@ -26,7 +26,7 @@ export default function SearchScreen({navigation}){
       <View className="bg-black h-screen">
       
        
-         <TouchableOpacity onPress={()=>navigation.goBack()}>
+         <TouchableOpacity className="p-4" onPress={()=>navigation.goBack()}>
             <Icon name="arrow-back" size={30} />
          </TouchableOpacity>
         <View className="bg-white/20 flex-row items-center justify-evenly px-4">
@@ -36,6 +36,7 @@ export default function SearchScreen({navigation}){
          <TextInput placeholder="Search games, shows and movies..." className=" text-md text-white"/>
          <Icon size={25} name="mic-outline" />
         </View>
+        <ScrollView showsVerticalScrollIndicator={false}>
         <Text className="p-4 text-white font-black text-lg">Recommended Mobile Games</Text>
          <ScrollView showsHorizontalScrollIndicator={false} className="px-4" horizontal>
             <Gamecard />
@@ -51,6 +52,14 @@ export default function SearchScreen({navigation}){
         <Moviecard />
         <Moviecard />
         <Moviecard />
+        <Moviecard />
+        <Moviecard />
+        <Moviecard />
+        <Moviecard />
+        <Moviecard />
+        <Moviecard />
+        </ScrollView>
+        
        </View>
     )
 }
