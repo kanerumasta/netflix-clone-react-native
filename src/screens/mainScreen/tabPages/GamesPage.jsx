@@ -45,6 +45,10 @@ export default function GamesPage({navigation}){
                 <Gamecard />
                 <Gamecard />
                 <Gamecard />
+                <Gamecard />
+                <Gamecard />
+                <Gamecard />
+                <Gamecard />
             </ScrollView>
             <Text className="text-white text-xl font-black p-4">Looster Games</Text>
             <ScrollView className="px-4" horizontal showsHorizontalScrollIndicator={false}>
