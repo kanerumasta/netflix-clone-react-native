@@ -5,9 +5,9 @@ import Icon from 'react-native-vector-icons/Ionicons'
 function Card({image, title, description}){
     return(
         <View className="border-[1px]  border-solid border-white/20 mb-4 overflow-hidden bg-black rounded-2xl">
-            <Image className="w-full h-[200px]" source={require('../../../../public/images/movie1.jpg')}/>
+            <Image className="w-full h-[200px]" source={require('../../../../public/images/toy.jpg')}/>
             <View className="p-3 gap-2">
-            <Text className="capitalize text-white text-xl font-bold">This is the movie</Text>
+            <Text className="capitalize text-white text-xl font-black">Toy story 19</Text>
             <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia voluptatibus obcaecati debitis nostrum,</Text>
             <View className="flex flex-row">
             <TouchableOpacity className="mr-4 flex-row items-center justify-center w-[100px] rounded-lg p-4 bg-white ">

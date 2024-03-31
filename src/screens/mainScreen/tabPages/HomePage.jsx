@@ -6,7 +6,7 @@ import SearchScreen from "../components/SearchScreen"
 function Moviecard(){
     return(
         <View className="mb-7 mr-3 w-[100px] rounded-lg overflow-hidden">
-            <Image className="w-full h-[150px]" source={require('../../../../public/images/collateral.jpg')}/>
+            <Image className="w-full h-[150px]" source={require('../../../../public/images/titanic.jpg')}/>
         </View>
     )
 }
@@ -14,11 +14,11 @@ function Moviecard(){
 function Topcard(){
     return(
         <View className="overflow-hidden rounded-2xl  border-[1px] border-solid border-white/30">
-            <Image className="w-full h-[500px]" source={require('../../../../public/images/deadpool.jpg')}/>
+            <Image className="w-full h-[500px]" source={require('../../../../public/images/titanic.jpg')}/>
             <View className="h-full w-full absolute">
                 <View className="absolute bottom-0  w-full">
-                <Text className=" text-[50px] font-black text-white text-center w-full">DEADPOOL</Text>
-                <Text className="text-center">Slick * Witty * Comedy * Wawaw</Text>
+                <Text className=" text-[70px] font-black text-white text-center w-full">TITANIC</Text>
+                <Text className="text-center">Slick * Witty * Comedy * Yaga2</Text>
                 <View className="flex flex-row items-center justify-center my-4">
             <TouchableOpacity className="mr-4 items-center w-[160px] flex-row justify-center rounded-lg p-4 bg-white ">
                 <Icon name="play" color="#000000" size={20} />

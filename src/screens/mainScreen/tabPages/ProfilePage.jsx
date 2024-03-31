@@ -9,7 +9,7 @@ import { BottomSheetContext } from "../../../../App";
 function Moviecard(){
     return(
         <View className="mb-7 mr-3 w-[100px] rounded-lg overflow-hidden">
-            <Image className="w-full h-[150px]" source={require('../../../../public/images/collateral.jpg')}/>
+            <Image className="w-full h-[150px]" source={require('../../../../public/images/moana.jpg')}/>
         </View>
     )
 }
@@ -59,8 +59,8 @@ export default function ProfilePage({navigation}){
             <Header navigation={navigation}/>
             <ScrollView showsVerticalScrollIndicator={false}>
             <View className="flex items-center">
-            <Profile color={"orange"} size={100}/>
-            <Text className="text-white mt-4 text-2xl font-black">Mac Nino Ibale</Text>
+            <Image source={require("../../../../public/icons/profile-icons/red.jpg")} className="w-24 h-24 rounded-lg" />
+            <Text className="text-white mt-4 text-2xl font-black">Karen Gonzales</Text>
             </View>
             <Menu pressed={()=>navigation.navigate('notifications')} color={"red"} title="Nofitications" icon={<Icon color="#ffffff" name="notifications" size={20}/>}/>
             <Menu color="blue" title="Downloads" icon={<Icon color="#ffffff" name="download" size={20}/>}/>

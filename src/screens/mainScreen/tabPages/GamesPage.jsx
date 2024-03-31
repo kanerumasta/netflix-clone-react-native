@@ -30,7 +30,7 @@ export default function GamesPage({navigation}){
             />
             <LinearGradient className="absolute top-0 left-0 w-full h-full" start={{x:0,y:0}} end={{x:0,y:1}} colors={["rgba(0,0,0,0.2)","rgba(0,0,0,1)"]}>         
                  <View className="absolute bottom-4 items-center left-0 w-full">
-                    <Image className="h-32 w-32 rounded-xl " source={require('../../../../public/images/deadpool.jpg')}/>
+                    <Image className="h-32 w-32 rounded-xl " source={require('../../../../public/images/titanic.jpg')}/>
                     <Text className="text-white font-black text-lg">Ghost Detective</Text>
                     <Text className="capitalize">jamo adam huwa kalami ana</Text>
                 </View>
